@@ -5,7 +5,7 @@ from app import models
 from app.database import engine
 from app.config import settings
 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine) # generate database without alembic
 
 app = FastAPI()
 
