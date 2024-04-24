@@ -21,11 +21,11 @@ Base = declarative_base()
 def connect_db():
     try:
         conn = psycopg2.connect(
-            host='localhost', 
-            port=5432,
-            dbname='apidev', 
-            user='postgres',  
-            password='passworD98!',
+            host=settings.database_hostname, 
+            port=settings.database_port,
+            dbname=settings.database_name, 
+            user=settings.database_username,  
+            password=settings.database_password,
             cursor_factory=DictCursor
             )
         cursor = conn.cursor()
